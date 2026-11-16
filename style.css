@@ -1,0 +1,385 @@
+/* Grundinställningar för hela webbplatsen */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Webbplatsens grunddesign */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0f172a;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+}
+
+/* Logotyp */
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+nav ul a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Effekt när muspekaren är över länkarna */
+nav ul a:hover {
+  color: #60a5fa;
+}
+
+/* Hero-sektion */
+
+.hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 8%;
+}
+
+/* Huvudrubrik */
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+/* Underrubrik */
+.hero h2 {
+  font-size: 28px;
+  color: #60a5fa;
+  margin-bottom: 20px;
+}
+
+/* Presentationstext */
+.hero p {
+  max-width: 650px;
+  margin-bottom: 30px;
+}
+
+/* Knapparnas behållare */
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+/* Länkar som ser ut som knappar */
+.hero-buttons a {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #2563eb;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+/* Effekt när muspekaren är över knapparna */
+.hero-buttons a:hover {
+  background-color: #1d4ed8;
+}
+
+/* Om mig-sektion */
+.about {
+  padding: 80px 8%;
+}
+
+/* Rubrik för om mig */
+.about h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+/* Behållare för profilbild och text */
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+/* Profilbild */
+.about-content img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* Textinnehåll */
+.about-text {
+  max-width: 650px;
+}
+
+/* Underrubrik */
+.about-text h3 {
+  font-size: 24px;
+  color: #60a5fa;
+  margin-bottom: 20px;
+}
+
+/* Stycken */
+.about-text p {
+  margin-bottom: 15px;
+}
+
+/* Kompetenssektion */
+.skills {
+  padding: 80px 8%;
+}
+
+/* Rubrik */
+.skills h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* Introduktionstext */
+.skills p {
+  max-width: 650px;
+  margin-bottom: 30px;
+}
+
+/* Lista med kompetenser */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  list-style: none;
+}
+
+/* Varje kompetens */
+.skills-list li {
+  background-color: #1e293b;
+  padding: 12px 24px;
+  border-radius: 10px;
+}
+
+/* Projektsektion */
+.projects {
+  padding: 80px 8%;
+}
+
+/* Rubrik */
+.projects h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* Introduktionstext */
+.projects > p {
+  max-width: 650px;
+  margin-bottom: 30px;
+}
+
+/* Behållare för projektkorten */
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+}
+
+/* Projektkort */
+.project-card {
+  background-color: #1e293b;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+/* Projekttitel */
+.project-card h3 {
+  font-size: 24px;
+  color: #60a5fa;
+  margin-bottom: 15px;
+}
+
+/* Projektbeskrivning och tekniker */
+.project-card p {
+  margin-bottom: 15px;
+}
+
+/* GitHub-länkar */
+.project-card a {
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+/* Effekt när muspekaren är över länkarna */
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+/* Kontaktsektion */
+.contact {
+  padding: 80px 8%;
+}
+
+/* Rubrik */
+.contact h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* Introduktionstext */
+.contact > p {
+  max-width: 650px;
+  margin-bottom: 30px;
+}
+
+/* Kontaktformulär */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  background-color: #1e293b;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+/* Etiketter för formulärfälten */
+#contact-form label {
+  font-weight: bold;
+}
+
+/* Inmatningsfält och meddelanderuta */
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  background-color: #334155;
+  color: #ffffff;
+  border: 1px solid #64748b;
+  border-radius: 8px;
+  font: inherit;
+}
+
+/* Markering när ett fält är aktivt */
+#contact-form input:focus,
+#contact-form textarea:focus {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+}
+
+/* Skicka-button */
+#contact-form button {
+  padding: 12px 24px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#contact-form button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Footer */
+footer {
+  padding: 30px 8%;
+  text-align: center;
+  border-top: 1px solid #334155;
+}
+
+/* Copyright-text */
+footer p {
+  margin-bottom: 10px;
+}
+
+/* GitHub-Länk */
+footer a {
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+/* Effekt när muspekaren är över länken */
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Navigation som följer med vid scrolling */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #0f172a;
+}
+
+/* Mjuk scrollning mellan sektioner */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+/* Responsiv design för surfplattor och mobiler */
+@media (max-width: 768px) {
+  /* Anpassa Hero-sektionen */
+  .hero {
+    min-height: 60vh;
+    padding: 50px 6%;
+  }
+
+  /* Mindre Huvudrubrik */
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  /* Mindre underrubrik */
+  .hero h2 {
+    font-size: 22px;
+  }
+
+  /* Placera profilbild och text under varandra */
+  .about-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  /* Anpassa profilbilden */
+  .about-content img {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* Visa ett projekt per rad */
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+
+  /* Minska sektionernas mellanrum */
+  .about,
+  .skills,
+  .projects,
+  .contact {
+    padding: 50px 6%;
+  }
+
+  /* Anpassa rubrikstorlekarna */
+  .about h2,
+  .skills h2,
+  .projects h2,
+  .contact h2 {
+    font-size: 28px;
+  }
+}
