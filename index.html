@@ -49,7 +49,7 @@
         <h2>Om mig</h2>
         <!-- Profilbild -->
         <div class="about-content">
-          <img src="images/ProfileImage.jpg" alt="Porträttbild" />
+          <img src="images/ProfileImage.jpg" alt="Profilbild" />
 
           <!-- Personlig presentation -->
           <div class="about-text">
@@ -75,6 +75,122 @@
           </div>
         </div>
       </section>
+      <!-- Kompetenser: Tekniker och verktyg -->
+      <section id="kompetenser" class="skills">
+        <h2>Mina Kompetenser</h2>
+        <p>
+          Här är några av de tekniker och verktyg som jag arbetar med och
+          utvecklar mina kunskaper inom.
+        </p>
+        <!-- Lista med tekniska kompetenser -->
+        <ul class="skills-list">
+          <li>C#</li>
+          <li>.NET</li>
+          <li>HTML5</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Git &amp; GitHub</li>
+        </ul>
+      </section>
+      <!-- Projekt: Visar mina tidigare och pågående projekt -->
+      <section id="projekt" class="projects">
+        <h2>Mina Projekt</h2>
+        <p>
+          Här är några av de projekt jag har arbetat med under min utbildning.
+        </p>
+        <!-- Behållare för projektkorten -->
+        <div class="project-list">
+          <!-- Projekt 1: Bibliotekshanteringssystem -->
+          <article class="project-card">
+            <h3>Bibliotekshanteringssystem</h3>
+            <p>
+              En konsolapplikation utvecklad i C# och .NET för att hantera
+              böcker i ett bibliotek. Projektet använder objektorienterad
+              programmering.
+            </p>
+            <p>Tekniker: C#, .NET</p>
+            <a
+              href="https://github.com/ArminZ23/Bibliotekshanteringssystem"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visa på GitHub
+            </a>
+          </article>
+
+          <!-- Projekt 2: Min Portfolio -->
+          <article class="project-card">
+            <h3>Min Portfolio</h3>
+            <p>
+              En personlig webbplats där jag presenterar mig själv, mina
+              kompetenser och projekt. Webbplatsen utvecklas med HTML, CSS och
+              JavaScript.
+            </p>
+            <p>Tekniker: HTML, CSS, JavaScript</p>
+            <a
+              href="https://github.com/ArminZ23/Min-Portfolio"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visa på GitHub
+            </a>
+          </article>
+        </div>
+      </section>
+      <!-- Kontakt: Formulär för att kontakta mig -->
+      <section id="kontakt" class="contact">
+        <!-- Rubrik och introduktion -->
+        <h2>Kontakta mig</h2>
+        <p>
+          Har du frågor eller vill komma i kontakt med mig? Skicka gärna ett
+          meddelande!
+        </p>
+
+        <!-- Kontaktformulär -->
+        <form id="contact-form">
+          <!-- Namn -->
+          <label for="name">Namn</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Ditt Namn"
+            required
+          />
+          <!-- E-postadress -->
+          <label for="email">E-postadress</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="din@email.se"
+            required
+          />
+          <!-- Meddelande -->
+          <label for="message">Meddelande</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="Skriv ditt meddelande..."
+            required
+          ></textarea>
+          <!-- Knapp för att skicka formuläret -->
+          <button type="submit">Skicka meddelande</button>
+        </form>
+      </section>
     </main>
+    <!-- Footer: Webbplatsens nedersta del -->
+    <footer>
+      <p>&copy; 2026 Armin Zuberovic. Alla rättigheter förbehållna.</p>
+      <!-- Länk till GitHub-profil -->
+      <a
+        href="https://github.com/ArminZ23"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub
+      </a>
+    </footer>
   </body>
 </html>
