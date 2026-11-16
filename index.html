@@ -1,15 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Min Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-</head>
-<body>
-    
-    <h1>Min professionella portfolio</h1>
-    <p>Välkommen till min portfolio!</p>
-</body>
+  </head>
+  <body>
+    <header>
+      <!-- Navigation: Innehåller länkar till sidans sektioner -->
+      <nav aria-label="Huvudnavigation">
+        <!-- Logotyp som länkar till startsidan -->
+        <a href="#hem" class="logo">AZ</a>
+
+        <ul>
+          <li><a href="#hem">Hem</a></li>
+          <li><a href="#om-mig">Om mig</a></li>
+          <li><a href="#kompetenser">Kompetenser</a></li>
+          <li><a href="#projekt">Projekt</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!--Main: Webbplatsens huvudsakliga innehåll-->
+    <main>
+      <!-- Hero: Presentation på startsidan-->
+      <section id="hem" class="hero">
+        <!-- Huvudrubrik och introduktion -->
+        <h1>Hej! Mitt namn är Armin Zuberovic.</h1>
+        <h2>Systemutvecklarstudent.</h2>
+        <!-- Kort presentation -->
+        <p>
+          Jag utbildar mig till systemutvecklare med fokus på C# och .NET. Jag
+          är nyfiken på både frontend och backend och tycker om att utveckla
+          mina kunskaper genom praktiska projekt. Mitt mål är att skapa smarta,
+          användarvänliga och hållbara digitala lösningar.
+        </p>
+
+        <!-- Länkar till projekt och kontakt -->
+        <div class="hero-buttons">
+          <a href="#projekt">Se mina projekt</a>
+          <a href="#kontakt">Kontakta mig</a>
+        </div>
+      </section>
+      <!-- Om mig sektion -->
+      <section id="om-mig" class="about">
+        <h2>Om mig</h2>
+        <!-- Profilbild -->
+        <div class="about-content">
+          <img src="images/ProfileImage.jpg" alt="Porträttbild" />
+
+          <!-- Personlig presentation -->
+          <div class="about-text">
+            <h3>Lite mer om mig</h3>
+
+            <p>
+              Jag är en engagerad och nyfiken person med stort intresse för
+              teknik och problemlösning. Just nu studerar jag till
+              systemutvecklare med inriktning mot C# och .NET.
+            </p>
+
+            <p>
+              Jag tycker om att lära mig nya tekniker och utveckla mina
+              färdigheter genom praktiska projekt. Jag är särskilt intresserad
+              av både frontend och backend och vill fortsätta utvecklas inom
+              dessa områden.
+            </p>
+
+            <p>
+              Mitt mål är att arbeta som systemutvecklare och bidra till att
+              skapa användarvänliga och effektiva digitala lösningar.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
