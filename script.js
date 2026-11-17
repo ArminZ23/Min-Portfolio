@@ -29,3 +29,20 @@ menuLinks.forEach(link => {
     menuToggle.setAttribute('aria-label', 'Öppna menyn')
   })
 })
+
+// Hämtar kontaktformuläret från HTML
+const contactForm = document.querySelector('#contact-form')
+
+// Lyssnar efter att formuläret skickas
+contactForm.addEventListener('submit', event => {
+  // Förhindrar att sidan laddas om
+  event.preventDefault()
+  // Hämtar namnet som användaren har skrivit
+  const name = document.querySelector('#name').value
+  
+  // Hämtar elementet där meddelandet ska visas
+  const formMessage = document.querySelector('#form-message')
+ 
+  //   Visar ett personligt bekräftelsemeddelande
+  formMessage.textContent = `Tack ${name}! Detta är en demonstration och inget meddelande har skickats.`
+})
