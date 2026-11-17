@@ -13,8 +13,17 @@
       <nav aria-label="Huvudnavigation">
         <!-- Logotyp som länkar till startsidan -->
         <a href="#hem" class="logo">AZ</a>
-
-        <ul>
+        <!-- Knapp för mobilnavigation -->
+        <button 
+        type="button"
+        class="menu-toggle"
+        aria-label="Öppna menyn"
+        aria-expanded="false"
+        aria-controls="nav-links"
+        >
+        ☰
+        </button>
+        <ul id="nav-links">
           <li><a href="#hem">Hem</a></li>
           <li><a href="#om-mig">Om mig</a></li>
           <li><a href="#kompetenser">Kompetenser</a></li>

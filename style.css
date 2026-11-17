@@ -29,6 +29,11 @@ nav {
   text-decoration: none;
 }
 
+/* Hamburgermeny - dold på större skärmar */
+.menu-toggle {
+  display: none;
+}
+
 nav ul {
   display: flex;
   list-style: none;
@@ -367,6 +372,7 @@ html {
 
 /* Responsiv design för surfplattor och mobiler */
 @media (max-width: 768px) {
+
   /* Anpassa Hero-sektionen */
   .hero {
     min-height: 60vh;
@@ -421,5 +427,32 @@ html {
   .hero-buttons {
     flex-wrap: wrap;
     gap: 12px;
+  }
+
+  /* Visa hamburgaremenyn på mindre skärmar */
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 28px;
+    cursor: pointer;
+  }
+  
+  /* Dölj navigationsänkarna på mobil */
+  nav ul {
+    display: none;
+  }
+
+  /* Visa navigationslänkarna när menyn öppnas */
+  nav ul.open {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+  }
+
+  nav {
+    flex-wrap: wrap;
   }
 }
