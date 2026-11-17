@@ -39,10 +39,46 @@ contactForm.addEventListener('submit', event => {
   event.preventDefault()
   // Hämtar namnet som användaren har skrivit
   const name = document.querySelector('#name').value
-  
+
   // Hämtar elementet där meddelandet ska visas
   const formMessage = document.querySelector('#form-message')
- 
+
   //   Visar ett personligt bekräftelsemeddelande
   formMessage.textContent = `Tack ${name}! Detta är en demonstration och inget meddelande har skickats.`
+})
+
+//   Hämtar alla sektioner på sidan
+const sections = document.querySelectorAll('main section')
+
+// Lyssnar när användaren scrollar
+window.addEventListener('scroll', () => {
+  // Går igenom varje sektion
+  sections.forEach(section => {
+    // Hämta sektionens position
+    const sectionTop = section.offsetTop
+
+    // Hämtar sektionens höjd
+    const sectionHeight = section.offsetHeight
+
+    // Hämtar sektionens ID
+    const sectionId = section.getAttribute('id')
+
+    // Kontrollerar om användaren befinner sig i sektionen
+    if (
+      window.scrollY >= sectionTop - 150 &&
+      window.scrollY < sectionTop + sectionHeight - 150
+    ) {
+      // Tar bort tidigare aktiva markeringar
+      menuLinks.forEach(link => link.classList.remove('active'))
+      //  Hitta rätt navigationslänk
+      const activeLink = document.querySelector(
+        `#nav-links a[href="#${sectionId}"]`
+      )
+
+      // Markerar den aktiva länken
+      if (activeLink) {
+        activeLink.classList.add('active')
+      }
+    }
+  })
 })

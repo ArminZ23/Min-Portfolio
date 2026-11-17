@@ -34,6 +34,7 @@ nav {
   display: none;
 }
 
+/* Markerar den aktiva sektionen i navigationsmenyn */
 nav ul {
   display: flex;
   list-style: none;
@@ -50,8 +51,11 @@ nav ul a:hover {
   color: #60a5fa;
 }
 
+nav ul a.active {
+    color: #60a5fa;
+    font-weight: bold;
+  }
 /* Hero-sektion */
-
 .hero {
   min-height: 80vh;
   display: flex;
