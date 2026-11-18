@@ -63,6 +63,9 @@ nav ul a.active {
   padding: 60px 8%;
   background: radial-gradient(circle at 80% 30%, #1e40af55, transparent 45%),
     linear-gradient(135deg, #0f172a, #172554);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
 }
 
 /* Behållare för Hero-innehållet */
@@ -512,6 +515,73 @@ background-color: #1d4ed8;
 #back-to-top:focus-visible {
   outline: 3px solid #ffffff;
   outline-offset: 3px;
+}
+
+/* =============================
+FLYTANDE BAKGRUNDSANIMATIONER
+================================ */
+
+/* Täcker hela Hero-sektionen */
+.hero-background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Gemensam styling för ljuseffekterna */
+.glow {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  filter: blur(30px);
+  opacity: 0.4;
+}
+
+/* Blå ljuseffekt */
+.glow-blue {
+  background-color: #2563eb;
+  top: 10%;
+  left: 5%;
+  animation: floatBlue 12s ease-in-out infinite alternate;
+}
+
+/* Lila ljuseffekt */
+.glow-purple {
+  background-color: #9333ea;
+  bottom: 5%;
+  right: 5%;
+  animation: floatPurple 15s ease-in-out infinite alternate;
+}
+
+/* Flyttar den blå ljuseffekten */
+@keyframes floatBlue {
+  from {
+    transform: translate(0,0);
+  }
+
+  to {
+    transform: translate(80px, 50px);
+  }
+}
+
+/* Flyttar den lila ljuseffekten */
+@keyframes floatPurple {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(-70px, -50px);
+  }
+}
+
+/* Stänger av animationerna om användaren föredrar mindre rörelse */
+@media (prefers-reduced-motion: reduce) {
+  .glow {
+    animation: none;
+  }
 }
 /* Responsiv design för surfplattor och mobiler */
 @media (max-width: 768px) {
