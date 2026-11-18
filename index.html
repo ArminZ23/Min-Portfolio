@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Min Portfolio</title>
+    <title>Armin Zuberovic | Systemutvecklare Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
@@ -14,14 +14,14 @@
         <!-- Logotyp som länkar till startsidan -->
         <a href="#hem" class="logo">AZ</a>
         <!-- Knapp för mobilnavigation -->
-        <button 
-        type="button"
-        class="menu-toggle"
-        aria-label="Öppna menyn"
-        aria-expanded="false"
-        aria-controls="nav-links"
+        <button
+          type="button"
+          class="menu-toggle"
+          aria-label="Öppna menyn"
+          aria-expanded="false"
+          aria-controls="nav-links"
         >
-        ☰
+          ☰
         </button>
         <ul id="nav-links">
           <li><a href="#hem">Hem</a></li>
@@ -59,7 +59,8 @@
         <h2>Om mig</h2>
         <!-- Profilbild -->
         <div class="about-content">
-          <img src="images/ProfileImage.jpg" alt="Profilbild" />
+          <!-- Profilbild med beskrivande alternativtext -->
+          <img src="images/ProfileImage.jpg" alt="Porträtt av mig" />
 
           <!-- Personlig presentation -->
           <div class="about-text">
@@ -111,10 +112,16 @@
         <p>
           Här är några av de projekt jag har arbetat med under min utbildning.
         </p>
+        <!-- Knappar för att filtrera projekten -->
+        <div class="project-filters" role="group" aria-label="Filtrera projekt">
+          <button type="button" class="active" data-filter="all">Alla</button>
+          <button type="button" data-filter="frontend">Frontend</button>
+          <button type="button" data-filter="backend">Backend</button>
+        </div>
         <!-- Behållare för projektkorten -->
         <div class="project-list">
           <!-- Projekt 1: Bibliotekshanteringssystem -->
-          <article class="project-card">
+          <article class="project-card" data-category="backend">
             <h3>Bibliotekshanteringssystem</h3>
             <p>
               En konsolapplikation utvecklad i C# och .NET för att hantera
@@ -132,7 +139,7 @@
           </article>
 
           <!-- Projekt 2: Min Portfolio -->
-          <article class="project-card">
+          <article class="project-card" data-category="frontend">
             <h3>Min Portfolio</h3>
             <p>
               En personlig webbplats där jag presenterar mig själv, mina
@@ -191,7 +198,7 @@
           <!-- Knapp för att skicka formuläret -->
           <button type="submit">Skicka meddelande</button>
           <!-- Meddelande som uppdateras med JavaScript -->
-           <p id="form-message" role="status"></p>
+          <p id="form-message" role="status"></p>
         </form>
       </section>
     </main>

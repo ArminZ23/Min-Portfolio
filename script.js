@@ -82,3 +82,30 @@ window.addEventListener('scroll', () => {
     }
   })
 })
+
+// Hämtar alla filterknappar och projektkort
+const filterButtons = document.querySelectorAll('.project-filters button')
+const projectCards = document.querySelectorAll('.project-card')
+
+// Går igenom varje filterknapp
+filterButtons.forEach(button => {
+  // Lyssnar efter klick på knappen
+  button.addEventListener('click', () => {
+    // Hämtar det valda filtret
+    const filter = button.dataset.filter
+
+    // Tar bort active från alla knappar
+    filterButtons.forEach(btn => {
+      btn.classList.remove('active')
+    })
+    // Markerar den valda knappen
+    button.classList.add('active')
+
+    // Visar eller döljer projektet beroende på kategori
+    projectCards.forEach(card => {
+      const category = card.dataset.category
+
+      card.hidden = filter !== 'all' && filter !== category
+    })
+  })
+})
