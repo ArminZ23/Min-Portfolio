@@ -215,8 +215,6 @@ nav ul a.active {
   list-style: none;
 }
 
-
-
 /* Anpassa storleken på kompetensbilderna */
 .skills-list img {
   width: 30px;
@@ -237,8 +235,8 @@ nav ul a.active {
 
 /* Lift kompetenskortet när muspekaren är över */
 .skills-list li:hover {
-transform: translateY(-5px);
-background-color: #334155;
+  transform: translateY(-5px);
+  background-color: #334155;
 }
 
 /* Projektsektion */
@@ -483,7 +481,7 @@ html {
   height: 60px;
   display: flex;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   background-color: #2563eb;
   color: #ffffff;
   border-radius: 50%;
@@ -508,7 +506,7 @@ html {
 
 /* Hover-effekt */
 #back-to-top:hover {
-background-color: #1d4ed8;
+  background-color: #1d4ed8;
 }
 
 /* Focusmarkering för tangetbordnavigation */
@@ -558,7 +556,7 @@ FLYTANDE BAKGRUNDSANIMATIONER
 /* Flyttar den blå ljuseffekten */
 @keyframes floatBlue {
   from {
-    transform: translate(0,0);
+    transform: translate(0, 0);
   }
 
   to {
