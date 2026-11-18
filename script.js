@@ -109,3 +109,19 @@ filterButtons.forEach(button => {
     })
   })
 })
+
+// Hämtar knappen för att gå tillbaka till toppen
+const backToTop = document.querySelector('#back-to-top')
+
+//Visar eller döljer knappen vid scrolling
+window.addEventListener('scroll', () => {
+  backToTop.hidden = window.scrollY <= 300
+})
+
+// Scrollar tillbaka till toppen vid klick
+backToTop.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+})

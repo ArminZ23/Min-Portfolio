@@ -323,15 +323,45 @@ background-color: #334155;
   margin-bottom: 15px;
 }
 
-/* GitHub-länkar */
+/* Behållare för projektets tekniktaggar */
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Utseende för varje tagg */
+.project-tech span {
+  background-color: #334155;
+  color: #93c5fd;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* GitHub-länkar som knappar */
 .project-card a {
-  color: #60a5fa;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: #ffffff;
   text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 /* Effekt när muspekaren är över länkarna */
 .project-card a:hover {
-  text-decoration: underline;
+  background-color: #1d4ed8;
+}
+
+/* Fokusmarkering vid tangentbordsnavigation */
+.project-card a:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
 }
 
 /* Kontaktsektion */
@@ -440,6 +470,49 @@ html {
   scroll-padding-top: 90px;
 }
 
+/* Knapp för att gå tillbaka till toppen */
+#back-to-top {
+  position: fixed;
+  border: none;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  background-color: #2563eb;
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Gör pilen tydligare och riktar den uppåt */
+#back-to-top span {
+  display: inline-block;
+  transform: rotate(-90deg);
+  font-size: 32px;
+  line-height: 1;
+}
+
+/* Dölj knappen när den har hidden-attributet */
+#back-to-top[hidden] {
+  display: none;
+}
+
+/* Hover-effekt */
+#back-to-top:hover {
+background-color: #1d4ed8;
+}
+
+/* Focusmarkering för tangetbordnavigation */
+#back-to-top:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
 /* Responsiv design för surfplattor och mobiler */
 @media (max-width: 768px) {
   /* Anpassa Hero-sektionen */
